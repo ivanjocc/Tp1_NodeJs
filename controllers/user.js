@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-// Nota requiere autenticacion
+// Nota requiere autenticacion (token)
 
 // ruta obtener lista usuarios
 const getUsers = (req, res) => {

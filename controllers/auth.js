@@ -17,10 +17,10 @@ const login = (req, res) => {
 
 // registro
 const register = (req, res) => {
-	const { username, email, password } = req.body;
+	const {id, username, email, password } = req.body;
 
 	// registro exitoso
-	const user = new User('1', username, email, password);
+	const user = new User(id++, username, email, password);
 
 	// generar token
 	const token = jwt.sign({ userId: user.id, email: user.email }, 'secreto-token', { expiresIn: '1h' }); // Reemplaza 'secreto-token' con tu propia clave secreta
